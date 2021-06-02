@@ -1,0 +1,35 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\begin{document}
+
+\begin{itemize}
+    \item \underline{Names:} \\ Camilo Oberndorfer, Miguel Valencia
+    \item \underline{Processor:} \\Processor	Intel(R) Core(TM) i7-6700HQ CPU @ 2.60GHz   2.59 GHz
+    \item \underline{Installed RAM:} \\ 16GB
+    \item \underline{regex-posix version:} \\ 0.96
+    \item \underline{regex-tdfa version:} \\ 1.3
+\end{itemize}
+
+
+ \begin{tabular}{||c c c c c||} 
+ \hline
+ Library & Data Type & 250 MB & 1 GB & 5 GB \\ [0.5ex] 
+ \hline\hline
+ regex-posix & String & 15.01s & N/A & N/A \\ 
+ \hline
+ regex-posix & ByteString (Strict) & 14.93s & N/A & N/A \\
+ \hline
+ regex-posix & ByteString (Lazy) & 2.32s & 11.32s & 161.4s \\
+ \hline
+ regex-tdfa & String & 2.52s & 20.58s & 144.27s \\
+ \hline
+ regex-tdfa & ByteString (Strict) & 17.29s & N/A & N/A  \\ [1ex] 
+ \hline
+ regex-tdfa & ByteString (Lazy) & 7.32s & 20.58s & N/A\\ [1ex] 
+ \hline
+\end{tabular}
+
+
+
+\end{document}
