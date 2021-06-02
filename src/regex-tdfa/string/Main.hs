@@ -1,0 +1,18 @@
+import System.Environment
+import Text.Regex.TDFA
+import Control.Exception
+import Data.Time
+
+-- |Main Function
+main :: IO ()
+main = do
+            args <- getArgs
+            txt <- readFile (head args)
+            let regex = last args
+            start <- getCurrentTime
+            print ("Result: " ++ show (checkRegex txt regex :: Bool))
+            end <- getCurrentTime
+            print ("Time: " ++ show(diffUTCTime end start))
+
+checkRegex :: String -> String -> Bool
+checkRegex txt regex = txt =~ regex :: Bool
